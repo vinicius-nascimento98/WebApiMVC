@@ -8,26 +8,26 @@
 
 <p>
     <a href="@Url.Action("ManagementEmployee","Employee")" class="btn btn-default">
-        <ion-icon name="person-add-outline"></ion-icon> Create New
+        <ion-icon name="person-add-outline"></ion-icon> Novo
     </a>
 </p>
 <table class="table table-striped">
     <thead class="table-heading">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Position)
+                Cargo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Age)
+                Idade
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Salary)
+                Salário
             </th>
             <th>
-                Actions
+                Ações
             </th>
         </tr>
     </thead>
@@ -49,10 +49,10 @@
             </td>
             <td>
                 <a href="@Url.Action("ManagementEmployee","Employee",new { id = item.Id })" class="btn btn-default">
-                    <ion-icon name="pencil"></ion-icon>Edit
+                    <ion-icon name="pencil"></ion-icon>Editar
                 </a>
                 <a onclick="Delete(@item.Id)" class="btn btn-default">
-                    <ion-icon name="trash"></ion-icon>Delete
+                    <ion-icon name="trash"></ion-icon>Excluir
                 </a>
             </td>
         </tr>
@@ -72,8 +72,8 @@
         });
 
         function Delete(id) {
-            alertify.confirm('Web Api CRUD Operations',
-                'Tem certeza que deseja deletar esse registro?',
+            alertify.confirm('Web Api CRUD Operações',
+                'Tem certeza que deseja excluir esse registro?',
                 function () {
                     window.location.href = '@Url.Action("Delete","Employee")/' + id;
                 },

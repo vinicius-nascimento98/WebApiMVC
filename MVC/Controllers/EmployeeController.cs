@@ -39,12 +39,12 @@ namespace MVC.Controllers
             if (employee.Id == 0)
             {
                 HttpResponseMessage response = GlobalVariables.WebApiClient.PostAsJsonAsync("Employee", employee).Result;
-                TempData["SuccessMessage"] = "Saved Successfully";
+                TempData["SuccessMessage"] = "Salvo com Sucesso!";
             }
             else
             {
                 HttpResponseMessage response = GlobalVariables.WebApiClient.PutAsJsonAsync($"Employee/{employee.Id}", employee).Result;
-                TempData["SuccessMessage"] = "Update Successfully";
+                TempData["SuccessMessage"] = "Alterado com Sucesso!";
             }
 
             return RedirectToAction("index");
@@ -53,7 +53,7 @@ namespace MVC.Controllers
         public ActionResult Delete(int id)
         {
             HttpResponseMessage response = GlobalVariables.WebApiClient.DeleteAsync($"Employee/{id}").Result;
-            TempData["SuccessMessage"] = "Deleted Successfully";
+            TempData["SuccessMessage"] = "Excluido com Sucesso!";
             
             return RedirectToAction("index");
 

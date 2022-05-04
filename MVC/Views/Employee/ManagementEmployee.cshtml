@@ -9,32 +9,32 @@
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelFor(model => model.Name, "Nome")
             @Html.EditorFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Position)
+            @Html.LabelFor(model => model.Position,"Cargo")
             @Html.EditorFor(model => model.Position)
             @Html.ValidationMessageFor(model => model.Position)
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Age)
+            @Html.LabelFor(model => model.Age, "Idade")
             @Html.EditorFor(model => model.Age)
             @Html.ValidationMessageFor(model => model.Age)
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Salary)
+            @Html.LabelFor(model => model.Salary, "Salário")
             @Html.EditorFor(model => model.Salary)
             @Html.ValidationMessageFor(model => model.Salary)
         </div>
 
         <div class="form-group">
-            <input type="submit" value="submit" class="btn button" />
-            <input type="reset" value="reset" class="btn button" />
+            <input type="submit" value="Salvar" class="btn button" />
+            <input type="reset" value="Limpar" class="btn button" />
         </div>
     }
 </div>
